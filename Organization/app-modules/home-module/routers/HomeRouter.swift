@@ -30,7 +30,7 @@ class HomeRouter : PresenterToRouterProtocol{
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
     
-    func pushToDetailScreen(navigationConroller: NavigationController, movieIdObject: Int) {
+    func pushToDetailScreen(navigationConroller: NavigationController) {
 //        let detailModule = DetailRouter.createModule()
 //        detailModule.movieIdObject.accept(movieIdObject)
 //        navigationConroller.pushViewController(detailModule, animated: true)
