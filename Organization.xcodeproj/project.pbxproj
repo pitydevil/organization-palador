@@ -29,6 +29,8 @@
 		4BD4BBAB29A5B1D500A1373F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBAA29A5B1D500A1373F /* HomePresenter.swift */; };
 		4BD4BBAF29A5B3CD00A1373F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBAD29A5B3CD00A1373F /* HomeTableViewCell.swift */; };
 		4BD4BBB029A5B3CD00A1373F /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4BBAE29A5B3CD00A1373F /* HomeTableViewCell.xib */; };
+		4BD4BBB329A5B64E00A1373F /* ClassExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBB229A5B64E00A1373F /* ClassExtensions.swift */; };
+		4BD4BBB529A5B66B00A1373F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBB429A5B66B00A1373F /* HelperFunctions.swift */; };
 		CBCD23127CBCE48777BF0D72 /* Pods_Organization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A186B984157A8A14A8A6582 /* Pods_Organization.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		4BD4BBAA29A5B1D500A1373F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		4BD4BBAD29A5B3CD00A1373F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		4BD4BBAE29A5B3CD00A1373F /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		4BD4BBB229A5B64E00A1373F /* ClassExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtensions.swift; sourceTree = "<group>"; };
+		4BD4BBB429A5B66B00A1373F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		5A186B984157A8A14A8A6582 /* Pods_Organization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Organization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +128,7 @@
 		4BD4BB7829A5AB9B00A1373F /* network-utils */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4BBB129A5B62700A1373F /* ui-utils */,
 				4BD4BB8729A5AC5D00A1373F /* constant-utils */,
 				4BD4BB8029A5ABF200A1373F /* networking-domain */,
 				4BD4BB7929A5ABA500A1373F /* networking */,
@@ -282,6 +287,15 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		4BD4BBB129A5B62700A1373F /* ui-utils */ = {
+			isa = PBXGroup;
+			children = (
+				4BD4BBB229A5B64E00A1373F /* ClassExtensions.swift */,
+				4BD4BBB429A5B66B00A1373F /* HelperFunctions.swift */,
+			);
+			path = "ui-utils";
+			sourceTree = "<group>";
+		};
 		BFBEB9EE207E443A68845379 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +426,7 @@
 				4BD4BB9D29A5AE7900A1373F /* NavigationController.swift in Sources */,
 				4BD4BB7F29A5ABE300A1373F /* NetworkLogger.swift in Sources */,
 				4BD4BB8929A5AC7800A1373F /* Enums.swift in Sources */,
+				4BD4BBB529A5B66B00A1373F /* HelperFunctions.swift in Sources */,
 				4BD4BB6429A5A96100A1373F /* AppDelegate.swift in Sources */,
 				4BD4BBAF29A5B3CD00A1373F /* HomeTableViewCell.swift in Sources */,
 				4BD4BB8B29A5AC8C00A1373F /* SharedObjects.swift in Sources */,
@@ -422,6 +437,7 @@
 				4BD4BBAB29A5B1D500A1373F /* HomePresenter.swift in Sources */,
 				4BD4BB8229A5AC0600A1373F /* ApplicationEndpoint.swift in Sources */,
 				4BD4BB6629A5A96100A1373F /* SceneDelegate.swift in Sources */,
+				4BD4BBB329A5B64E00A1373F /* ClassExtensions.swift in Sources */,
 				4BD4BBA929A5B14700A1373F /* HomeIntractor.swift in Sources */,
 				4BD4BB7D29A5ABCF00A1373F /* NetworkError.swift in Sources */,
 				4BD4BBA129A5AFCB00A1373F /* HomeViewController.swift in Sources */,
