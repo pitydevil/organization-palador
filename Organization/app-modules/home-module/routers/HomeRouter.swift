@@ -9,9 +9,9 @@ import UIKit
 
 class HomeRouter : PresenterToRouterProtocol{
         
-    static func createModule() -> HomeViewController {
+    static func createModule() -> ParentTableViewController {
         
-        let view = mainstoryboard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+        let view = mainstoryboard.instantiateViewController(withIdentifier: "parentTableViewController") as! ParentTableViewController
         
         let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = HomePresenter()
         let interactor: PresenterToInteractorProtocol = HomeInteractor()

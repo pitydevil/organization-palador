@@ -21,16 +21,17 @@
 		4BD4BB8929A5AC7800A1373F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BB8829A5AC7800A1373F /* Enums.swift */; };
 		4BD4BB8B29A5AC8C00A1373F /* SharedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BB8A29A5AC8C00A1373F /* SharedObjects.swift */; };
 		4BD4BB9D29A5AE7900A1373F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BB9C29A5AE7900A1373F /* NavigationController.swift */; };
-		4BD4BBA129A5AFCB00A1373F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBA029A5AFCB00A1373F /* HomeViewController.swift */; };
 		4BD4BBA329A5AFE300A1373F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBA229A5AFE300A1373F /* HomeRouter.swift */; };
 		4BD4BBA529A5B04500A1373F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBA429A5B04500A1373F /* Users.swift */; };
 		4BD4BBA729A5B0BC00A1373F /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBA629A5B0BC00A1373F /* HomeProtocols.swift */; };
 		4BD4BBA929A5B14700A1373F /* HomeIntractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBA829A5B14700A1373F /* HomeIntractor.swift */; };
 		4BD4BBAB29A5B1D500A1373F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBAA29A5B1D500A1373F /* HomePresenter.swift */; };
-		4BD4BBAF29A5B3CD00A1373F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBAD29A5B3CD00A1373F /* HomeTableViewCell.swift */; };
-		4BD4BBB029A5B3CD00A1373F /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4BBAE29A5B3CD00A1373F /* HomeTableViewCell.xib */; };
 		4BD4BBB329A5B64E00A1373F /* ClassExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBB229A5B64E00A1373F /* ClassExtensions.swift */; };
 		4BD4BBB529A5B66B00A1373F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBB429A5B66B00A1373F /* HelperFunctions.swift */; };
+		4BD4BBF129A6089400A1373F /* ParentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBF029A6089400A1373F /* ParentTableViewController.swift */; };
+		4BD4BBF429A6092600A1373F /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBF229A6092600A1373F /* ParentTableViewCell.swift */; };
+		4BD4BBF529A6092600A1373F /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4BBF329A6092600A1373F /* ParentTableViewCell.xib */; };
+		4BD4BBF929A61FFF00A1373F /* UsersBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBF829A61FFF00A1373F /* UsersBody.swift */; };
 		CBCD23127CBCE48777BF0D72 /* Pods_Organization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A186B984157A8A14A8A6582 /* Pods_Organization.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,16 +54,17 @@
 		4BD4BB8829A5AC7800A1373F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		4BD4BB8A29A5AC8C00A1373F /* SharedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedObjects.swift; sourceTree = "<group>"; };
 		4BD4BB9C29A5AE7900A1373F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		4BD4BBA029A5AFCB00A1373F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4BD4BBA229A5AFE300A1373F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		4BD4BBA429A5B04500A1373F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		4BD4BBA629A5B0BC00A1373F /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		4BD4BBA829A5B14700A1373F /* HomeIntractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntractor.swift; sourceTree = "<group>"; };
 		4BD4BBAA29A5B1D500A1373F /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		4BD4BBAD29A5B3CD00A1373F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		4BD4BBAE29A5B3CD00A1373F /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		4BD4BBB229A5B64E00A1373F /* ClassExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtensions.swift; sourceTree = "<group>"; };
 		4BD4BBB429A5B66B00A1373F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		4BD4BBF029A6089400A1373F /* ParentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTableViewController.swift; sourceTree = "<group>"; };
+		4BD4BBF229A6092600A1373F /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
+		4BD4BBF329A6092600A1373F /* ParentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
+		4BD4BBF829A61FFF00A1373F /* UsersBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersBody.swift; sourceTree = "<group>"; };
 		5A186B984157A8A14A8A6582 /* Pods_Organization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Organization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -248,7 +250,8 @@
 		4BD4BB9829A5AE0200A1373F /* entities */ = {
 			isa = PBXGroup;
 			children = (
-				4BD4BBA429A5B04500A1373F /* Users.swift */,
+				4BD4BBF729A61FF400A1373F /* domain */,
+				4BD4BBF629A61FE100A1373F /* response */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -265,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				4BD4BBAC29A5B3B000A1373F /* components */,
-				4BD4BBA029A5AFCB00A1373F /* HomeViewController.swift */,
+				4BD4BBF029A6089400A1373F /* ParentTableViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -281,8 +284,8 @@
 		4BD4BBAC29A5B3B000A1373F /* components */ = {
 			isa = PBXGroup;
 			children = (
-				4BD4BBAD29A5B3CD00A1373F /* HomeTableViewCell.swift */,
-				4BD4BBAE29A5B3CD00A1373F /* HomeTableViewCell.xib */,
+				4BD4BBF229A6092600A1373F /* ParentTableViewCell.swift */,
+				4BD4BBF329A6092600A1373F /* ParentTableViewCell.xib */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -294,6 +297,22 @@
 				4BD4BBB429A5B66B00A1373F /* HelperFunctions.swift */,
 			);
 			path = "ui-utils";
+			sourceTree = "<group>";
+		};
+		4BD4BBF629A61FE100A1373F /* response */ = {
+			isa = PBXGroup;
+			children = (
+				4BD4BBA429A5B04500A1373F /* Users.swift */,
+			);
+			path = response;
+			sourceTree = "<group>";
+		};
+		4BD4BBF729A61FF400A1373F /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				4BD4BBF829A61FFF00A1373F /* UsersBody.swift */,
+			);
+			path = domain;
 			sourceTree = "<group>";
 		};
 		BFBEB9EE207E443A68845379 /* Pods */ = {
@@ -367,8 +386,8 @@
 			files = (
 				4BD4BB7029A5A96200A1373F /* LaunchScreen.storyboard in Resources */,
 				4BD4BB6D29A5A96200A1373F /* Assets.xcassets in Resources */,
-				4BD4BBB029A5B3CD00A1373F /* HomeTableViewCell.xib in Resources */,
 				4BD4BB6B29A5A96100A1373F /* Main.storyboard in Resources */,
+				4BD4BBF529A6092600A1373F /* ParentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,19 +447,20 @@
 				4BD4BB8929A5AC7800A1373F /* Enums.swift in Sources */,
 				4BD4BBB529A5B66B00A1373F /* HelperFunctions.swift in Sources */,
 				4BD4BB6429A5A96100A1373F /* AppDelegate.swift in Sources */,
-				4BD4BBAF29A5B3CD00A1373F /* HomeTableViewCell.swift in Sources */,
 				4BD4BB8B29A5AC8C00A1373F /* SharedObjects.swift in Sources */,
 				4BD4BBA529A5B04500A1373F /* Users.swift in Sources */,
 				4BD4BBA329A5AFE300A1373F /* HomeRouter.swift in Sources */,
 				4BD4BB8629A5AC3A00A1373F /* NetworkService.swift in Sources */,
 				4BD4BB7B29A5ABB000A1373F /* Endpoint.swift in Sources */,
 				4BD4BBAB29A5B1D500A1373F /* HomePresenter.swift in Sources */,
+				4BD4BBF929A61FFF00A1373F /* UsersBody.swift in Sources */,
+				4BD4BBF129A6089400A1373F /* ParentTableViewController.swift in Sources */,
 				4BD4BB8229A5AC0600A1373F /* ApplicationEndpoint.swift in Sources */,
 				4BD4BB6629A5A96100A1373F /* SceneDelegate.swift in Sources */,
 				4BD4BBB329A5B64E00A1373F /* ClassExtensions.swift in Sources */,
 				4BD4BBA929A5B14700A1373F /* HomeIntractor.swift in Sources */,
+				4BD4BBF429A6092600A1373F /* ParentTableViewCell.swift in Sources */,
 				4BD4BB7D29A5ABCF00A1373F /* NetworkError.swift in Sources */,
-				4BD4BBA129A5AFCB00A1373F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,18 +16,14 @@ extension ApplicationEndpoint: Endpoint {
     
     //MARK: URLRequest Base URL Host Component
     var host: String {
-        "mocki.io/v1"
+        "mocki.io"
     }
-    
-//https://mocki.io/v1/09b08e25-47f8-4395-872f-08235d0f9960
-    
+        
     //MARK: URLRequest Path Component
     var path: String {
         switch self {
         case .getUsers:
-            return "09b08e25-47f8-4395-872f-08235d0f9960"
-        default:
-            return ""
+            return "/v1/09b08e25-47f8-4395-872f-08235d0f9960"
         }
     }
 
@@ -35,8 +31,6 @@ extension ApplicationEndpoint: Endpoint {
     var method: HTTPMethod {
         switch self {
         case .getUsers:
-            return .get
-        default:
             return .get
         }
     }
