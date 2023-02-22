@@ -13,7 +13,7 @@ class HomeInteractor : PresenterToInteractorProtocol {
     //MARK: - OBJECT DECLARATION
     private let networkService    : NetworkServicing
     var presenter: InteractorToPresenterProtocol?
-//    let discoverMoviesArrayObject   = BehaviorRelay<[Movies]>(value: [])
+//    let usersArrayObject   = BehaviorRelay<[Users]>(value: [])
 
     //MARK: - INIT OBJECT DECLARATION
     init(networkService: NetworkServicing = NetworkService()) {
@@ -25,57 +25,75 @@ class HomeInteractor : PresenterToInteractorProtocol {
     func onAppear() async {
         await withTaskGroup(of: Void.self) { [weak self] group in
             guard let self = self else { return }
-            
-            /// Fetch Upcoming Movie from endpoint
+
+            /// Fetch Usersfrom endpoint
             /// from the given components.
             group.addTask { [self] in
-//                await self.fetchMovies(genreObject, false)
-            }
-            
-            /// Fetch Top Rated  Movie from endpoint
-            /// from the given components.
-            group.addTask { [self] in
-//                await self.fetchGenres()
+                await self.fetchUsers()
             }
         }
     }
     
-    //MARK: - Fetch Genres
-    /// Fetch Genres
-    /// from given components.
-//    func fetchGenres() async {
-//        let endpoint = ApplicationEndpoint<Any>.getGenres
-//        let result = await networkService.request(to: endpoint, decodeTo: Genre.self)
-//        switch result {
-//        case .success(let response):
-//            self.presenter?.noticeFetchGenresSuccess(response.genres)
-//        case .failure(_):
-//            self.presenter?.noticeFetchFailed()
-//        }
-//    }
+    //MARK: - Fetch Users Function
+    /// Fetch Users from endpoint
+    func fetchUsers() async {
+        let endpoint = ApplicationEndpoint.getUsers
+        let result = await networkService.request(to: endpoint, decodeTo: [Users].self)
+        switch result {
+        case .success(let response):
+            self.presenter?.noticeUsersSuccess(convertUsers(response))
+        case .failure(_):
+            self.presenter?.noticeFetchFailed()
+        }
+    }
     
-//    //MARK: - Fetch Movies
-//    /// Fetch Movies
-//    /// from given components.
-//    /// - Parameters:
-//    ///     - enumState: movie type that's gonan be passed onto the fetch movie endpoint
-//    func fetchMovies(_ genreObject: GenreBody,_ resetArgs : Bool) async{
-//        let endpoint = ApplicationEndpoint.getDiscover(genreObject)
-//        let result = await networkService.request(to: endpoint, decodeTo: Response<[Movies]>.self)
-//        switch result {
-//        case .success(let response):
-//            if let movies = response.results {
-//                if resetArgs {
-//                    discoverMoviesArrayObject.accept([])
-//                }
-//                var appendedMovies = discoverMoviesArrayObject.value
-//                appendedMovies.append(contentsOf: movies)
-//                discoverMoviesArrayObject.accept(appendedMovies)
-//                self.presenter?.notifeFetchMoviesSuccess(appendedMovies)
-//            }
-//        case .failure(_):
-//            self.presenter?.noticeFetchFailed()
-//        }
-//    }
+    //MARK: - Convert Users to User Hierarchy Function
+    /// Return result argument whether scrollview is already the bottom or not
+    /// - Parameters:
+    ///     - user1DArray: movie type that's gonan be passed onto the fetch movie endpoint
+    /// - Returns:
+    ///     - enumState: movie type that's gonan be passed onto the fetch movie endpoint
+    private func convertUsers(_ user1DArray : [Users]) -> ([[UsersBody]]){
+        var users2DArray = [[UsersBody]]()
+        for item in user1DArray {
+            let customObject = UsersBody(employeeID: item.employeeID, name: item.name, managerID: item.managerID, isHead: true)
+            var tempUser1DArray = [UsersBody]()
+            var tempLoopObject = customObject
+            tempUser1DArray.append(customObject)
+            while(true) {
+                if tempLoopObject.managerID != nil {
+                    let index = user1DArray.firstIndex(where: {$0.employeeID == tempLoopObject.managerID}) ?? 0
+                    tempLoopObject = UsersBody(employeeID: user1DArray[index].employeeID, name: user1DArray[index].name, managerID: user1DArray[index].managerID, isHead: false)
+                    tempUser1DArray.append(tempLoopObject)
+                }else {
+                    users2DArray.append(tempUser1DArray)
+                    break
+                }
+            }
+        }
+        return users2DArray
+    }
+    
+    //MARK: - Convert Users to User Hierarchy Function
+    /// Return result argument whether scrollview is already the bottom or not
+    /// - Parameters:
+    ///     - user1DArray: movie type that's gonan be passed onto the fetch movie endpoint
+    func onSearch(_ userArray: [[UsersBody]], _ searchText : String) {
+        var tempResult = [[UsersBody]]()
+        for item in userArray {
+            let usersBodyHead = item.filter {
+                $0.name.localizedCaseInsensitiveContains(searchText) && $0.isHead == true
+            }
+
+            if !usersBodyHead.isEmpty {
+                for item in usersBodyHead {
+                    if let index = userArray.firstIndex(where: {$0.first?.name ==  item.name}) {
+                        tempResult.append(userArray[index])
+                    }
+                }
+            }
+            presenter?.noticeSearchSuccess(tempResult)
+        }
+    }
 }
 

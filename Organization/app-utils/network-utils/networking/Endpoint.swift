@@ -24,7 +24,7 @@ extension Endpoint {
     
     var urlRequest: URLRequest? {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "http"
+        urlComponents.scheme = "https"
         urlComponents.host = host
         urlComponents.path = path
         guard let url = urlComponents.url else { return nil }

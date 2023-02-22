@@ -17,6 +17,10 @@ class HomePresenter:ViewToPresenterProtocol {
         await interactor?.onAppear()
     }
     
+    func onSearch(_ userArray: [[UsersBody]], _ searchText: String) {
+        interactor?.onSearch(userArray, searchText)
+    }
+    
     func showDetailController(navigationController: NavigationController) {
 //        router?.pushToDetailScreen(navigationConroller: navigationController, movieIdObject: movieIdObject)
         router?.pushToDetailScreen(navigationConroller: navigationController)
@@ -24,18 +28,13 @@ class HomePresenter:ViewToPresenterProtocol {
 }
 
 extension HomePresenter: InteractorToPresenterProtocol{
-   
-//    func notifeFetchMoviesSuccess(_ moviesArray: Array<Movies>) {
-//        view?.showMovies(moviesArray)
-//    }
-//
-//    func noticeFetchGenresSuccess(_ genresArray: [Genres]) {
-//        view?.showGenres(genresArray)
-//    }
-//
-//    func noticeScrollViewPosition(_ result: Bool) {
-//        view?.showScrollViewPosition(result)
-//    }
+    func noticeSearchSuccess(_ userArray: [[UsersBody]]) {
+        view?.showSearch(userArray)
+    }
+    
+    func noticeUsersSuccess(_ userArray: [[UsersBody]]) {
+        view?.showUsersSuccess(userArray)
+    }
     
     func noticeFetchFailed() {
         view?.showError()
