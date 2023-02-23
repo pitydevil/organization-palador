@@ -213,6 +213,7 @@
 		4BD4BB9329A5AD9300A1373F /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4BBFA29A650D600A1373F /* detail-module */,
 				4BD4BB9429A5ADAD00A1373F /* home-module */,
 			);
 			path = "app-modules";
@@ -313,6 +314,61 @@
 				4BD4BBF829A61FFF00A1373F /* UsersBody.swift */,
 			);
 			path = domain;
+			sourceTree = "<group>";
+		};
+		4BD4BBFA29A650D600A1373F /* detail-module */ = {
+			isa = PBXGroup;
+			children = (
+				4BD4BBFB29A650E000A1373F /* views */,
+				4BD4BC0029A6514C00A1373F /* interactors */,
+				4BD4BBFF29A6512A00A1373F /* presenters */,
+				4BD4BBFC29A650E600A1373F /* protocols */,
+				4BD4BBFD29A6511B00A1373F /* entities */,
+				4BD4BBFE29A6512400A1373F /* routers */,
+			);
+			path = "detail-module";
+			sourceTree = "<group>";
+		};
+		4BD4BBFB29A650E000A1373F /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		4BD4BBFC29A650E600A1373F /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		4BD4BBFD29A6511B00A1373F /* entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		4BD4BBFE29A6512400A1373F /* routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = routers;
+			sourceTree = "<group>";
+		};
+		4BD4BBFF29A6512A00A1373F /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenters;
+			sourceTree = "<group>";
+		};
+		4BD4BC0029A6514C00A1373F /* interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactors;
 			sourceTree = "<group>";
 		};
 		BFBEB9EE207E443A68845379 /* Pods */ = {
