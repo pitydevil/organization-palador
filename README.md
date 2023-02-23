@@ -94,11 +94,11 @@ Contoh: `feat(dashboard): add button`
 ### 11. Screenshots
 
 <p align="center">
-  <img src="https://github.com/pitydevil/organization-palador/main/Images/image1.png">
+  <img src="https://github.com/pitydevil/organization-palador/main/images/image1.png">
 </p>
 <p align="center">
-  <img src="https://github.com/pitydevil/organization-palador/main/Images/image2.png">
+  <img src="https://github.com/pitydevil/organization-palador/main/images/image2.png">
 </p>
 <p align="center">
-  <img src="https://github.com/pitydevil/organization-palador/main/Images/image3.png">
+  <img src="https://github.com/pitydevil/organization-palador/main/images/image3.png">
 </p>
