@@ -26,7 +26,7 @@ class ParentTableViewController: UIViewController, UISearchBarDelegate {
         //MARK: - OnAppear Function
         /// Fetch all movies type endpoint from server
         Task {
-            SVProgressHUD.show(withStatus: "Fetching Movies")
+            SVProgressHUD.show(withStatus: "Loading Organizations")
             await presentor?.onAppear()
         }
     }
@@ -37,11 +37,6 @@ class ParentTableViewController: UIViewController, UISearchBarDelegate {
 
         //MARK: - Instantiate & Register Controller
         self.title = "Organization List"
-//        detailController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "detailViewController") as DetailViewController
-        
-        // Connect Add Button with the necessary IBAction
-        let buttonAdd = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(responseAddButton))
-        self.navigationItem.rightBarButtonItem  = buttonAdd
         
         //MARK: - Register TableViewCell
         tableView.register(UINib(nibName: ParentTableViewCell.cellID, bundle: nil), forCellReuseIdentifier: ParentTableViewCell.cellID)
@@ -80,15 +75,11 @@ class ParentTableViewController: UIViewController, UISearchBarDelegate {
                 searchText?.count != 0 ? presentor?.onSearch(mainUserList.value, searchText!) : userList.accept(mainUserList.value)
             }).disposed(by: bags)
     }
-    
-    @objc private func responseAddButton() {
-        
-    }
 }
 
 extension ParentTableViewController : PassBackTableViewCellObject {
-    func passBackTableViewCellObject(_ userObject: UsersBody) {
-        print(userObject.name)
+    func passBackTableViewCellObject(_ userArray: [UsersBody], _ userObject: UsersBody) {
+        presentor?.showDetailController(self.navigationController as! NavigationController, userArray, userObject)
     }
 }
 

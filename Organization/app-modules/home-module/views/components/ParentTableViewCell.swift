@@ -52,7 +52,7 @@ class ParentTableViewCell: UITableViewCell {
         childTableView.rx.itemSelected.subscribe(onNext: { [self] (indexPath) in
             /// Send User's choosen Upcoming Movie Object to response handleMovieFunction
             childTableView.deselectRow(at: indexPath, animated: true)
-            delegate?.passBackTableViewCellObject(userList.value[indexPath.row])
+            delegate?.passBackTableViewCellObject(userList.value, userList.value[indexPath.row])
         }).disposed(by: bags)
     }
     
