@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PassBackTableViewCellObject {
-    func passBackTableViewCellObject(_ userObject: UsersBody)
+    func passBackTableViewCellObject(_ userArray : [UsersBody], _ userObject: UsersBody)
 }
 
 protocol ViewToPresenterProtocol: AnyObject{
@@ -17,7 +17,7 @@ protocol ViewToPresenterProtocol: AnyObject{
     var router: PresenterToRouterProtocol? {get set}
     func onAppear() async
     func onSearch(_ userArray : [[UsersBody]], _ searchText : String)
-    func showDetailController(navigationController:NavigationController)
+    func showDetailController(_ navigationController:NavigationController, _ userArray : [UsersBody], _ userObject: UsersBody)
 }
 
 protocol PresenterToViewProtocol: AnyObject{
@@ -28,7 +28,7 @@ protocol PresenterToViewProtocol: AnyObject{
 
 protocol PresenterToRouterProtocol: AnyObject {
     static func createModule() -> ParentTableViewController
-    func pushToDetailScreen(navigationConroller:NavigationController)
+    func pushToDetailScreen(_ navigationConroller:NavigationController, _ userArray : [UsersBody], _ userObject: UsersBody)
 }
 
 protocol PresenterToInteractorProtocol: AnyObject {

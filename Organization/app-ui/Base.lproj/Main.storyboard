@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="500" y="591.54929577464793"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="IfQ-zA-h6a">
             <objects>
-                <viewController id="7mm-69-ZJz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7mm-69-ZJz" customClass="DetailViewController" customModule="Organization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="34x-dI-cTJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,17 +67,16 @@
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2K-lG-oQ4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2K-lG-oQ4">
                                         <rect key="frame" x="20" y="13" width="133" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" name="baseGray"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="b2K-lG-oQ4" firstAttribute="leading" secondItem="VH0-k4-TvV" secondAttribute="leading" constant="20" symbolic="YES" id="H3K-Tq-Nok"/>
-                                    <constraint firstItem="RVO-uY-kYb" firstAttribute="top" secondItem="b2K-lG-oQ4" secondAttribute="bottom" constant="8" symbolic="YES" id="IpX-Ys-4YE"/>
                                     <constraint firstAttribute="bottom" secondItem="RVO-uY-kYb" secondAttribute="bottom" constant="8" id="Tce-Qp-TiT"/>
                                     <constraint firstAttribute="trailing" secondItem="RVO-uY-kYb" secondAttribute="trailing" constant="20" symbolic="YES" id="WlP-YG-ZOC"/>
                                     <constraint firstItem="b2K-lG-oQ4" firstAttribute="top" secondItem="VH0-k4-TvV" secondAttribute="top" constant="13" id="bKq-t0-Ur5"/>
@@ -100,7 +98,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Managers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmM-OI-XIa">
                                                 <rect key="frame" x="20" y="8" width="133" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" name="baseGray"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -125,7 +123,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-cp-C0Y">
                                                 <rect key="frame" x="20" y="8" width="150" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" name="baseGray"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -167,6 +165,11 @@
                             <constraint firstItem="d5F-bp-gjn" firstAttribute="trailing" secondItem="pxE-gN-k25" secondAttribute="trailing" id="wq5-eY-nu6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="managerTableView" destination="VTn-lE-xGh" id="wAo-Q9-YxX"/>
+                        <outlet property="subordinateTableView" destination="7OW-Rg-OnP" id="yjY-2X-lHQ"/>
+                        <outlet property="titleTextfield" destination="RVO-uY-kYb" id="3dU-0u-0Xl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQB-WO-O7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,9 +177,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="baseGray">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

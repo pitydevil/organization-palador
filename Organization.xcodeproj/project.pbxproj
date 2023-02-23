@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BA5635F29A70B35005D4718 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5635D29A70B35005D4718 /* DetailTableViewCell.swift */; };
+		4BA5636029A70B35005D4718 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BA5635E29A70B35005D4718 /* DetailTableViewCell.xib */; };
 		4BD4BB6429A5A96100A1373F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BB6329A5A96100A1373F /* AppDelegate.swift */; };
 		4BD4BB6629A5A96100A1373F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BB6529A5A96100A1373F /* SceneDelegate.swift */; };
 		4BD4BB6B29A5A96100A1373F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4BB6929A5A96100A1373F /* Main.storyboard */; };
@@ -32,12 +34,19 @@
 		4BD4BBF429A6092600A1373F /* ParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBF229A6092600A1373F /* ParentTableViewCell.swift */; };
 		4BD4BBF529A6092600A1373F /* ParentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4BBF329A6092600A1373F /* ParentTableViewCell.xib */; };
 		4BD4BBF929A61FFF00A1373F /* UsersBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BBF829A61FFF00A1373F /* UsersBody.swift */; };
+		4BD4BC0229A6FED200A1373F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BC0129A6FED200A1373F /* DetailViewController.swift */; };
+		4BD4BC0429A6FF4000A1373F /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BC0329A6FF3F00A1373F /* DetailProtocols.swift */; };
+		4BD4BC0629A6FFE700A1373F /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BC0529A6FFE700A1373F /* DetailPresenter.swift */; };
+		4BD4BC0829A7011400A1373F /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BC0729A7011400A1373F /* DetailInteractor.swift */; };
+		4BD4BC0A29A7011E00A1373F /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4BC0929A7011E00A1373F /* DetailRouter.swift */; };
 		CBCD23127CBCE48777BF0D72 /* Pods_Organization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A186B984157A8A14A8A6582 /* Pods_Organization.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DC8ED837EF7E64698F5C4A7 /* Pods-Organization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Organization.release.xcconfig"; path = "Target Support Files/Pods-Organization/Pods-Organization.release.xcconfig"; sourceTree = "<group>"; };
 		31B79360CAA03FF3FAED1915 /* Pods-Organization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Organization.debug.xcconfig"; path = "Target Support Files/Pods-Organization/Pods-Organization.debug.xcconfig"; sourceTree = "<group>"; };
+		4BA5635D29A70B35005D4718 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		4BA5635E29A70B35005D4718 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		4BD4BB6029A5A96100A1373F /* Organization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Organization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD4BB6329A5A96100A1373F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BD4BB6529A5A96100A1373F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +74,11 @@
 		4BD4BBF229A6092600A1373F /* ParentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTableViewCell.swift; sourceTree = "<group>"; };
 		4BD4BBF329A6092600A1373F /* ParentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentTableViewCell.xib; sourceTree = "<group>"; };
 		4BD4BBF829A61FFF00A1373F /* UsersBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersBody.swift; sourceTree = "<group>"; };
+		4BD4BC0129A6FED200A1373F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4BD4BC0329A6FF3F00A1373F /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		4BD4BC0529A6FFE700A1373F /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		4BD4BC0729A7011400A1373F /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		4BD4BC0929A7011E00A1373F /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		5A186B984157A8A14A8A6582 /* Pods_Organization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Organization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -332,6 +346,8 @@
 		4BD4BBFB29A650E000A1373F /* views */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4BC0B29A709F300A1373F /* components */,
+				4BD4BC0129A6FED200A1373F /* DetailViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -339,6 +355,7 @@
 		4BD4BBFC29A650E600A1373F /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4BC0329A6FF3F00A1373F /* DetailProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -353,6 +370,7 @@
 		4BD4BBFE29A6512400A1373F /* routers */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4BC0929A7011E00A1373F /* DetailRouter.swift */,
 			);
 			path = routers;
 			sourceTree = "<group>";
@@ -360,6 +378,7 @@
 		4BD4BBFF29A6512A00A1373F /* presenters */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4BC0529A6FFE700A1373F /* DetailPresenter.swift */,
 			);
 			path = presenters;
 			sourceTree = "<group>";
@@ -367,8 +386,18 @@
 		4BD4BC0029A6514C00A1373F /* interactors */ = {
 			isa = PBXGroup;
 			children = (
+				4BD4BC0729A7011400A1373F /* DetailInteractor.swift */,
 			);
 			path = interactors;
+			sourceTree = "<group>";
+		};
+		4BD4BC0B29A709F300A1373F /* components */ = {
+			isa = PBXGroup;
+			children = (
+				4BA5635D29A70B35005D4718 /* DetailTableViewCell.swift */,
+				4BA5635E29A70B35005D4718 /* DetailTableViewCell.xib */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		BFBEB9EE207E443A68845379 /* Pods */ = {
@@ -441,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BD4BB7029A5A96200A1373F /* LaunchScreen.storyboard in Resources */,
+				4BA5636029A70B35005D4718 /* DetailTableViewCell.xib in Resources */,
 				4BD4BB6D29A5A96200A1373F /* Assets.xcassets in Resources */,
 				4BD4BB6B29A5A96100A1373F /* Main.storyboard in Resources */,
 				4BD4BBF529A6092600A1373F /* ParentTableViewCell.xib in Resources */,
@@ -496,7 +526,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA5635F29A70B35005D4718 /* DetailTableViewCell.swift in Sources */,
+				4BD4BC0429A6FF4000A1373F /* DetailProtocols.swift in Sources */,
+				4BD4BC0829A7011400A1373F /* DetailInteractor.swift in Sources */,
 				4BD4BB8429A5AC1900A1373F /* Response.swift in Sources */,
+				4BD4BC0A29A7011E00A1373F /* DetailRouter.swift in Sources */,
 				4BD4BBA729A5B0BC00A1373F /* HomeProtocols.swift in Sources */,
 				4BD4BB9D29A5AE7900A1373F /* NavigationController.swift in Sources */,
 				4BD4BB7F29A5ABE300A1373F /* NetworkLogger.swift in Sources */,
@@ -506,7 +540,9 @@
 				4BD4BB8B29A5AC8C00A1373F /* SharedObjects.swift in Sources */,
 				4BD4BBA529A5B04500A1373F /* Users.swift in Sources */,
 				4BD4BBA329A5AFE300A1373F /* HomeRouter.swift in Sources */,
+				4BD4BC0629A6FFE700A1373F /* DetailPresenter.swift in Sources */,
 				4BD4BB8629A5AC3A00A1373F /* NetworkService.swift in Sources */,
+				4BD4BC0229A6FED200A1373F /* DetailViewController.swift in Sources */,
 				4BD4BB7B29A5ABB000A1373F /* Endpoint.swift in Sources */,
 				4BD4BBAB29A5B1D500A1373F /* HomePresenter.swift in Sources */,
 				4BD4BBF929A61FFF00A1373F /* UsersBody.swift in Sources */,

@@ -8,6 +8,8 @@
 import Foundation
 
 class HomePresenter:ViewToPresenterProtocol {
+
+    
   
     var view: PresenterToViewProtocol?
     var interactor: PresenterToInteractorProtocol?
@@ -21,9 +23,8 @@ class HomePresenter:ViewToPresenterProtocol {
         interactor?.onSearch(userArray, searchText)
     }
     
-    func showDetailController(navigationController: NavigationController) {
-//        router?.pushToDetailScreen(navigationConroller: navigationController, movieIdObject: movieIdObject)
-        router?.pushToDetailScreen(navigationConroller: navigationController)
+    func showDetailController(_ navigationController: NavigationController, _ userArray: [UsersBody], _ userObject: UsersBody) {
+        router?.pushToDetailScreen(navigationController, userArray, userObject)
     }
 }
 
