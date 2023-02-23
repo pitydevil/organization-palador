@@ -94,17 +94,11 @@ Contoh: `feat(dashboard): add button`
 ### 11. Screenshots
 
 <p align="center">
-  <img src="https://github.com/pitydevil/TMDB-VIPER-Submission/blob/main/Images/s1.png">
+  <img src="https://github.com/pitydevil/organization-palador/main/Images/image1.png">
 </p>
 <p align="center">
-  <img src="https://github.com/pitydevil/TMDB-VIPER-Submissionblob/main/Images/s2.png">
+  <img src="https://github.com/pitydevil/organization-palador/main/Images/image2.png">
 </p>
 <p align="center">
-  <img src="https://github.com/pitydevil/TMDB-VIPER-Submission/blob/main/Images/s3.png">
-</p>
-<p align="center">
-  <img src="https://github.com/pitydevil/TMDB-VIPER-Submission/blob/main/Images/s4.png">
-</p>
-<p align="center">
-  <img src="https://github.com/pitydevil/TMDB-VIPER-Submission/blob/main/Images/s5.png">
+  <img src="https://github.com/pitydevil/organization-palador/main/Images/image3.png">
 </p>
