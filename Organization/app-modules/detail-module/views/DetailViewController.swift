@@ -16,6 +16,10 @@ class DetailViewController: UIViewController {
     @IBOutlet var subordinateTableView: UITableView!
     @IBOutlet var managerTableView: UITableView!
     @IBOutlet var titleTextfield: UITextField!
+    @IBOutlet var managerHeightConstant: NSLayoutConstraint!
+    @IBOutlet var subordinateHeightConstant: NSLayoutConstraint!
+    @IBOutlet var managerLabel: UILabel!
+    @IBOutlet var subordinateLabel: UILabel!
     
     //MARK: OBJECT DECLARATION
     private let managerList : BehaviorRelay<[UsersBody]> = BehaviorRelay(value: [])
@@ -25,16 +29,6 @@ class DetailViewController: UIViewController {
     let choosenUser : BehaviorRelay<UsersBody> = BehaviorRelay(value: UsersBody(employeeID: 0, name: "", managerID: nil, isHead: false))
     var presentor : ViewToPresenterProtocolDetail?
 
-    
-    //MARK: OBJECT OBSERVER DECLARATION
-//    private var userListObserver : Observable<[UsersBody]> {
-//        return userList.asObservable()
-//    }
-//
-//    private var userListObserver : Observable<[UsersBody]> {
-//        return userList.asObservable()
-//    }
-    
     //MARK: VIEWWILLAPPEAR
     override func viewWillAppear(_ animated: Bool) {
         //MARK: - OnAppear Function
@@ -45,13 +39,24 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //MARK: ViewWillLayoutSubviews
+    override func viewWillLayoutSubviews() {
+        super.updateViewConstraints()
+        managerHeightConstant.constant = managerTableView.contentSize.height
+        subordinateHeightConstant.constant = subordinateTableView.contentSize.height
+        titleTextfield.setLeftPaddingPoints(8.0)
+    }
+    
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //MARK: - Register TableViewCell
         managerTableView.register(UINib(nibName: DetailTableViewCell.cellID, bundle: nil), forCellReuseIdentifier: DetailTableViewCell.cellID)
+        managerTableView.allowsSelection = false
         subordinateTableView.register(UINib(nibName: DetailTableViewCell.cellID, bundle: nil), forCellReuseIdentifier: DetailTableViewCell.cellID)
+        subordinateTableView.allowsSelection = false
+        managerTableView.rx.setDelegate(self).disposed(by: bags)
         
         //MARK: - TableView Datasource and Delegate Functions
             //MARK: - Bind upcomingMoviesList with Table View
@@ -79,6 +84,12 @@ class DetailViewController: UIViewController {
     }
 }
 
+extension DetailViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.viewWillLayoutSubviews()
+    }
+}
+
 extension DetailViewController : PresenterToViewProtocolDetail {
     
     //MARK: - Return Genre Array for CollectionView
@@ -91,6 +102,12 @@ extension DetailViewController : PresenterToViewProtocolDetail {
             titleObservableString.accept(choosenUser.value.name)
             SVProgressHUD.dismiss()
             managerList.accept(userArray)
+            if userArray.isEmpty {
+                managerLabel.isHidden = true
+                managerTableView.isHidden = true
+                managerHeightConstant.constant = 0
+                managerTableView.layoutIfNeeded()
+            }
         }
     }
     
@@ -104,6 +121,10 @@ extension DetailViewController : PresenterToViewProtocolDetail {
             titleObservableString.accept(choosenUser.value.name)
             SVProgressHUD.dismiss()
             subordinateList.accept(userArray)
+            if userArray.isEmpty {
+                subordinateTableView.isHidden = true
+                subordinateLabel.isHidden = true
+            }
         }
     }
     

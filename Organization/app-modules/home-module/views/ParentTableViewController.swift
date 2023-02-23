@@ -38,10 +38,6 @@ class ParentTableViewController: UIViewController, UISearchBarDelegate {
         //MARK: - Instantiate & Register Controller
         self.title = "Organization List"
         
-        // Connect Add Button with the necessary IBAction
-        let buttonAdd = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(responseAddButton))
-        self.navigationItem.rightBarButtonItem  = buttonAdd
-        
         //MARK: - Register TableViewCell
         tableView.register(UINib(nibName: ParentTableViewCell.cellID, bundle: nil), forCellReuseIdentifier: ParentTableViewCell.cellID)
         
@@ -78,10 +74,6 @@ class ParentTableViewController: UIViewController, UISearchBarDelegate {
             searchBar.rx.text.subscribe(onNext: { [self] searchText in
                 searchText?.count != 0 ? presentor?.onSearch(mainUserList.value, searchText!) : userList.accept(mainUserList.value)
             }).disposed(by: bags)
-    }
-    
-    @objc private func responseAddButton() {
-        
     }
 }
 

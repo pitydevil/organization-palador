@@ -92,4 +92,3 @@ public func errorServerAlert() -> UIAlertController {
     alert.addAction(cancel)
     return alert
 }
-
