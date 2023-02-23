@@ -9,24 +9,32 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    /// instantiate uiwindow, so we can connect with the scene delegate object.
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        
-       let home = HomeRouter.createModule()
-       let navigationController = NavigationController()
-       navigationController.viewControllers = [home]
 
-       guard let winScene = (scene as? UIWindowScene) else { return }
-       window = UIWindow(windowScene: winScene)
-       window?.rootViewController = navigationController
-       window?.makeKeyAndVisible()
+        /// instantiate parentViewController as the root of navigationController
+        let home = HomeRouter.createModule()
+        /// instantiate navigationController
+        let navigationController = NavigationController()
+        /// Make parentViewController as the root of viewController
+        navigationController.viewControllers = [home]
+        
+        /// instantiate windowSceneObject
+        guard let winScene = (scene as? UIWindowScene) else { return }
+        
+        /// init winow object
+        window = UIWindow(windowScene: winScene)
+        /// make the window rootViewController with the navigationController
+        window?.rootViewController = navigationController
+        /// Make the windows as the primary key
+        window?.makeKeyAndVisible()
        
-       let appDelegate = UIApplication.shared.delegate as! AppDelegate
-       appDelegate.window = self.window
+        /// instantiate appDelegate Object
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        /// connect app delegate window object with the scene delegate object
+        appDelegate.window = self.window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

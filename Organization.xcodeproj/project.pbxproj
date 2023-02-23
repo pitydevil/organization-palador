@@ -337,7 +337,6 @@
 				4BD4BC0029A6514C00A1373F /* interactors */,
 				4BD4BBFF29A6512A00A1373F /* presenters */,
 				4BD4BBFC29A650E600A1373F /* protocols */,
-				4BD4BBFD29A6511B00A1373F /* entities */,
 				4BD4BBFE29A6512400A1373F /* routers */,
 			);
 			path = "detail-module";
@@ -358,13 +357,6 @@
 				4BD4BC0329A6FF3F00A1373F /* DetailProtocols.swift */,
 			);
 			path = protocols;
-			sourceTree = "<group>";
-		};
-		4BD4BBFD29A6511B00A1373F /* entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = entities;
 			sourceTree = "<group>";
 		};
 		4BD4BBFE29A6512400A1373F /* routers */ = {

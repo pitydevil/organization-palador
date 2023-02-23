@@ -15,16 +15,16 @@ class DetailTableViewCell: UITableViewCell {
     //MARK: OBJECT DECLARATION
     static var cellID = "DetailTableViewCell"
     
-    //MARK: AWAKEFROMNIB
+    //MARK: AwakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    //MARK: - Convert Users to User Hierarchy Function
-    /// Return result argument whether scrollview is already the bottom or not
+    //MARK: - Configure Cell Functions
+    /// iInstantiate tableViewCellObject
     /// - Parameters:
-    ///     - user1DArray: movie type that's gonan be passed onto the fetch movie endpoint
-    func configurCell(_ userBody : UsersBody, _ row : Int) {
+    ///     - userBody: selected UserBody object for the nameLabel text
+    func configurCell(_ userBody : UsersBody) {
         nameLabel.text = "\(userBody.name)"
     }
 }
